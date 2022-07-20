@@ -21,7 +21,7 @@ const MovieDetails = (props) => {
 
     return (
 
-        <TableContainer component={Paper} sx={{ minWidth: 500, maxWidth: 800 }}>
+        <TableContainer component={Paper} sx={{ width: "100%" }}>
             <Table aria-label="simple table" style={{ backgroundColor: mode.theme !== 'light' ? "gray" : 'white' }}>
                 <TableHead>
                     <TableRow>

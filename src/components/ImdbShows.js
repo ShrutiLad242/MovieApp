@@ -1,3 +1,5 @@
+
+
 import { useEffect, useState } from "react";
 // import IMDBtable from "./IMDBtable";
 
@@ -32,12 +34,12 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 }));
 
 
-const IMDBRatings = () => {
+const ImdbShows = () => {
 
   const [movies, setMovies] = useState([]);
   const getMovies = async () => {
     const response = await fetch(
-      "https://imdb-api.com/en/API/Top250Movies/k_yip52iqe/",
+      "https://imdb-api.com/en/API/Top250TVs/k_yip52iqe/",
       {
         method: "GET",
         headers: {},
@@ -84,4 +86,4 @@ const IMDBRatings = () => {
 
   );
 };
-export default IMDBRatings;
+export default ImdbShows;

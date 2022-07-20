@@ -20,18 +20,18 @@ const IMDBRatings = () => {
 
         </Grid>
         <Grid container columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-            <Grid item md={2.4}>
+            <Grid item md={2.4} xs={2.4}>
                 <h3>Title</h3>
             </Grid>
-            <Grid item md={3}>
+            <Grid item md={3} xs={3}>
                 <h3>Year</h3>
             </Grid>
-            <Grid item md={2.6}>
+            <Grid item md={2.6} xs={2.6}>
                 <h3>Image</h3>
-            </Grid><Grid item md={2}>
+            </Grid><Grid item md={2} xs={2}>
                 <h3>Votes</h3>
             </Grid>
-            <Grid item md={1}>
+            <Grid item md={1} xs={1}>
                 <h3>Edit</h3>
             </Grid>
 

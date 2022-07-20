@@ -36,61 +36,61 @@ const IMDBRatings = () => {
 
   const columns = [
     {
-        field: 'rank',
-        headerName: 'rank',
-      },
-      {
-        field: 'title',
-        headerName: 'title',
-      }, {
-        field: 'image',
-        headerName: 'image',
-      },
-      {
-        field: 'year',
-        headerName: 'year',
-      }, {
-        field: 'vote',
-        headerName: 'vote',
-      },
+      field: 'rank',
+      headerName: 'rank',
+    },
+    {
+      field: 'title',
+      headerName: 'title',
+    }, {
+      field: 'image',
+      headerName: 'image',
+    },
+    {
+      field: 'year',
+      headerName: 'year',
+    }, {
+      field: 'vote',
+      headerName: 'vote',
+    },
   ];
 
   return (
 
-    
-        <TableContainer component={Paper}>
-          <Table sx={{ minWidth: 650 }} aria-label="simple table">
-            <TableHead>
-              <TableRow>
-                <TableCell align="right">Rank</TableCell>
-                <TableCell align="right">Title</TableCell>
-                <TableCell align="right">Image</TableCell>
-                <TableCell align="right">year</TableCell>
-                <TableCell align="right">votes</TableCell>
 
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              {movies.map((row) => (
-                <TableRow
-                  key={row.id}
-                  sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                >
-                  <TableCell component="th" scope="row">
-                    {row.rank}
-                  </TableCell>
-                  <TableCell align="right">{row.title}</TableCell>
-                  <TableCell align="right">{row.image}</TableCell>
-                  <TableCell align="right">{row.year}</TableCell>
-                  <TableCell align="right">{row.imDbRatingCount}</TableCell>
+    <TableContainer component={Paper}>
+      <Table sx={{ width: "100 %" }} aria-label="simple table">
+        <TableHead>
+          <TableRow>
+            <TableCell align="right">Rank</TableCell>
+            <TableCell align="right">Title</TableCell>
+            <TableCell align="right">Image</TableCell>
+            <TableCell align="right">year</TableCell>
+            <TableCell align="right">votes</TableCell>
 
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </TableContainer>
-   
-    
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {movies.map((row) => (
+            <TableRow
+              key={row.id}
+              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+            >
+              <TableCell component="th" scope="row">
+                {row.rank}
+              </TableCell>
+              <TableCell align="right">{row.title}</TableCell>
+              <TableCell align="right">{row.image}</TableCell>
+              <TableCell align="right">{row.year}</TableCell>
+              <TableCell align="right">{row.imDbRatingCount}</TableCell>
+
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
+
+
 
 
 

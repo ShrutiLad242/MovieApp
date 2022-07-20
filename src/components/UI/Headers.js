@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const Headers = (props) => {
     return (
         <React.Fragment>
-            <AppBar position="static">
+            <AppBar position="static" width="100%">
                 <ul className={classes.nav}>
                     <li>
                         <Link to="/" style={{
@@ -44,6 +44,21 @@ const Headers = (props) => {
                             padding: "0.75rem 1.5rem",
                             borderRadius: "4px",
                         }}>IMDB Movies</Link>
+
+                    </li>
+
+                    <li>
+                        {/* <Button onClick={<Link to="/imdbmovies"></Link>}>IMDB Movies</Button> */}
+                        <Link to="/shows" style={{
+                            cursor: "pointer",
+                            font: "inherit",
+                            color: "Black",
+                            border: "none",
+                            backgroundColor: "none",
+                            textDecoration: "none",
+                            padding: "0.75rem 1.5rem",
+                            borderRadius: "4px",
+                        }}>IMDB Shows</Link>
 
                     </li>
 

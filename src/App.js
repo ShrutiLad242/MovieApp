@@ -6,6 +6,7 @@ import { createContext, useState } from 'react';
 import { Route } from 'react-router-dom';
 import IMDBRatings from './components/IMDBRatings';
 import IMDBmovies from './components/IMDBmovies';
+import ImdbShows from './components/ImdbShows';
 
 export const ThemeContext = createContext(null);
 export const list = createContext(null);
@@ -334,14 +335,14 @@ function App() {
     "vote_count": 3342
   }];
 
-  const[a,setA]= useState(Movies);
+  const [a, setA] = useState(Movies);
   const toggleTheme = () => {
     setTheme((curr) => (curr === 'light' ? 'dark' : 'light'));
   }
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      <list.Provider value={{a,setA}}>
+      <list.Provider value={{ a, setA }}>
         <Headers onChange={toggleTheme} checked={theme === 'dark'} />
         <Route path="/imdbmovies" exact>
           <IMDBmovies />
@@ -353,6 +354,10 @@ function App() {
 
 
         </Route>
+        <Route path="/shows">
+          <ImdbShows />
+        </Route>
+
 
 
 
