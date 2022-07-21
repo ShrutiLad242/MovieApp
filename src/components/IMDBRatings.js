@@ -37,7 +37,7 @@ const IMDBRatings = () => {
   const [movies, setMovies] = useState([]);
   const getMovies = async () => {
     const response = await fetch(
-      "https://imdb-api.com/en/API/Top250Movies/k_yip52iqe/",
+      "https://imdb-api.com/en/API/Top250Movies/k_zc79xs3g",
       {
         method: "GET",
         headers: {},
